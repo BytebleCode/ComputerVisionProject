@@ -1,0 +1,20 @@
+# Project: color_sorter
+# Imported from: C:\Users\binar\Downloads\Color and Shape Recognition.v8-75-25.mt-yolov6
+
+class_names:
+- Blue Circle
+- Blue Cylinder
+- Blue Square
+- Red Circle
+- Red Cylinder
+- Red Square
+- Yellow Circle
+- Yellow Cylinder
+- Yellow Square
+model_size: s
+batch_size: 16
+epochs: 25
+img_size: 640
+device: '0'
+save_graphs: true
+show_graphs: true

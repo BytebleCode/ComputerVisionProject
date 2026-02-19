@@ -1,0 +1,7 @@
+torch>=1.8.0
+torchvision
+opencv-python
+pyyaml
+matplotlib
+pandas
+requests

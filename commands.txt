@@ -1,0 +1,96 @@
+================================================================================
+                         COMMANDS REFERENCE
+================================================================================
+
+NOTE: All commands should be run from the FineTuneYOLO folder.
+      Use: venv\Scripts\python.exe  (or activate the venv first)
+
+================================================================================
+SETUP (one-time)
+================================================================================
+
+  python -m venv venv
+  venv\Scripts\python.exe setup.py
+
+    Creates a virtual environment, clones YOLOv6 repo, installs dependencies,
+    and downloads pretrained weights.
+
+================================================================================
+PROJECTS
+================================================================================
+
+  Create a new empty project:
+    venv\Scripts\python.exe train.py --project <name> --create
+
+  Import a Roboflow / YOLO-format dataset into a project:
+    venv\Scripts\python.exe train.py --project <name> --import "path/to/dataset"
+
+  List all projects and their status:
+    venv\Scripts\python.exe train.py --list
+
+================================================================================
+TRAINING
+================================================================================
+
+  Train a project:
+    venv\Scripts\python.exe train.py --project <name>
+
+  Resume interrupted training:
+    venv\Scripts\python.exe train.py --project <name> --resume
+
+================================================================================
+EVALUATION
+================================================================================
+
+  Evaluate on validation set:
+    venv\Scripts\python.exe evaluate.py --project <name>
+
+  Evaluate on test set:
+    venv\Scripts\python.exe evaluate.py --project <name> --task test
+
+================================================================================
+DETECTION (inference on new images)
+================================================================================
+
+  Detect on a single image:
+    venv\Scripts\python.exe detect.py --project <name> --source image.jpg
+
+  Detect on a folder of images:
+    venv\Scripts\python.exe detect.py --project <name> --source ./my_images/
+
+  Detect on a video:
+    venv\Scripts\python.exe detect.py --project <name> --source video.mp4
+
+  With custom thresholds:
+    venv\Scripts\python.exe detect.py --project <name> --source image.jpg --conf-thresh 0.5 --iou-thresh 0.4
+
+================================================================================
+GRAPHS
+================================================================================
+
+  View training graphs (opens window):
+    venv\Scripts\python.exe graphs.py --project <name>
+
+  Save graphs as PNG only (no window):
+    venv\Scripts\python.exe graphs.py --project <name> --save-only
+
+  Compare two projects side by side:
+    venv\Scripts\python.exe graphs.py --project <name1> --compare <name2>
+
+================================================================================
+CONFIG (edit per-project)
+================================================================================
+
+  Each project config lives at:  projects/<name>/config.yaml
+
+  Key settings:
+    class_names:  ["car", "truck"]     # your object classes
+    model_size:   s                     # n / s / m / l / lite_s / lite_m / lite_l
+    batch_size:   16                    # lower if you run out of GPU memory
+    epochs:       100                   # more = longer training, potentially better
+    img_size:     640                   # input resolution
+    device:       "0"                   # "0" for GPU, "cpu" for CPU
+    save_graphs:  true                  # auto-save graphs after training
+    show_graphs:  true                  # pop up graph window after training
+
+================================================================================

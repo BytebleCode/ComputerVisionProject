@@ -1,0 +1,31 @@
+# Plan
+plan.txt
+
+# Trained weights
+*.pt
+weights/
+
+# YOLOv6 repo (cloned by setup.py)
+YOLOv6/
+
+# Virtual environment
+venv/
+
+# Project datasets and runs (user data)
+projects/*/datasets/
+projects/*/runs/
+projects/*/data.yaml
+projects/*/finetune_config.py
+projects/*/.train_cache.json
+projects/*/.val_cache.json
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+# OS
+.DS_Store
+Thumbs.db
