@@ -19,6 +19,10 @@ projects/*/finetune_config.py
 projects/*/.train_cache.json
 projects/*/.val_cache.json
 
+# Raw data and archives
+pullimgfolder/
+*.zip
+
 # Python
 __pycache__/
 *.py[cod]

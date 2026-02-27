@@ -13,7 +13,7 @@ class_names:
 - Yellow Square
 model_size: s
 batch_size: 16
-epochs: 25
+epochs: 100
 img_size: 640
 device: '0'
 save_graphs: true

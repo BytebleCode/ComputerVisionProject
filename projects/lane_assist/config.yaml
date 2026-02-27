@@ -1,0 +1,23 @@
+# Project: lane_assist
+# Converted from COCO format
+
+class_names:
+- dashed_line_white_lane
+- broken_and_solid_lines_white_lane
+- broken_and_solid_lines_yellow_lane
+- broken_line_white_lane
+- broken_line_yellow_lane
+- double_solid_line_white_lane
+- double_solid_line_yellow_lane
+- left_turn
+- right_turn
+- solid_line_white_lane
+- solid_line_yellow_lane
+- straight_way
+model_size: s
+batch_size: 16
+epochs: 100
+img_size: 640
+device: '0'
+save_graphs: true
+show_graphs: true

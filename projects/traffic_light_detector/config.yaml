@@ -1,0 +1,14 @@
+# Project: traffic_light_detector
+# Converted from COCO format
+
+class_names:
+- green
+- red
+- yellow
+model_size: s
+batch_size: 16
+epochs: 100
+img_size: 416
+device: '0'
+save_graphs: true
+show_graphs: true
